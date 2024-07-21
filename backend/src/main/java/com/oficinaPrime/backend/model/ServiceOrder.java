@@ -1,13 +1,19 @@
 package com.oficinaPrime.backend.model;
 
-import com.oficinaPrime.backend.domain.enums.ServiceOrderStatus;
-import com.oficinaPrime.backend.domain.enums.ServiceType;
+import com.oficinaPrime.backend.domain.ServiceOrderDomain;
 
-public class ServiceOrder {
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "service_order")
+public class ServiceOrder extends ServiceOrderDomain{
+
+    @Id@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Client cliente;
-    private ServiceType tipoServico;
-    private ServiceOrderStatus status;
 
 
     public Integer getId() {
@@ -18,29 +24,6 @@ public class ServiceOrder {
         this.id = id;
     }
 
-    public Client getCliente() {
-        return this.cliente;
-    }
-
-    public void setCliente(Client cliente) {
-        this.cliente = cliente;
-    }
-
-    public ServiceType getTipoServico() {
-        return this.tipoServico;
-    }
-
-    public void setTipoServico(ServiceType tipoServico) {
-        this.tipoServico = tipoServico;
-    }
-
-    public ServiceOrderStatus getStatus() {
-        return this.status;
-    }
-
-    public void setStatus(ServiceOrderStatus status) {
-        this.status = status;
-    }
-
+    
 
 }

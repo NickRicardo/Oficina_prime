@@ -1,19 +1,20 @@
-package com.oficinaPrime.backend.dto;
+package com.oficinaPrime.backend.domain;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class ServiceOrderDTO {
+public abstract class ServiceOrderDomain implements Serializable {
 
-    private Integer id;
-    private String clientName;
-    private String serviceType;
-    private LocalDate serviceDate;
-    private String status;
-    private String notes;
+    protected Integer id;
+    protected String clientName;
+    protected String serviceType;
+    protected LocalDate serviceDate;
+    protected String status;
+    protected String notes;
 
-
+    // Getters e Setters
     public Integer getId() {
-        return this.id;
+        return id;
     }
 
     public void setId(Integer id) {
@@ -21,7 +22,7 @@ public class ServiceOrderDTO {
     }
 
     public String getClientName() {
-        return this.clientName;
+        return clientName;
     }
 
     public void setClientName(String clientName) {
@@ -29,7 +30,7 @@ public class ServiceOrderDTO {
     }
 
     public String getServiceType() {
-        return this.serviceType;
+        return serviceType;
     }
 
     public void setServiceType(String serviceType) {
@@ -37,7 +38,7 @@ public class ServiceOrderDTO {
     }
 
     public LocalDate getServiceDate() {
-        return this.serviceDate;
+        return serviceDate;
     }
 
     public void setServiceDate(LocalDate serviceDate) {
@@ -45,7 +46,7 @@ public class ServiceOrderDTO {
     }
 
     public String getStatus() {
-        return this.status;
+        return status;
     }
 
     public void setStatus(String status) {
@@ -53,12 +54,10 @@ public class ServiceOrderDTO {
     }
 
     public String getNotes() {
-        return this.notes;
+        return notes;
     }
 
     public void setNotes(String notes) {
         this.notes = notes;
     }
-
-
 }
