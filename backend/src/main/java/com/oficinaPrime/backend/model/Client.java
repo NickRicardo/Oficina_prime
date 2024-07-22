@@ -23,6 +23,4 @@ public class Client extends ClientDomain {
     public void setId(Integer id) {
         this.id = id;
     }
-
-    // Outros métodos podem ser adicionados aqui se necessário
 }
