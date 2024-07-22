@@ -18,6 +18,8 @@ public interface ServiceOrderRepository extends JpaRepository<ServiceOrder, Inte
 
     List<ServiceOrder> findByServiceDateBetween(LocalDate startDate, LocalDate endDate);
 
+  
     Optional<ServiceOrder> findById(Integer id);
 
 }
+ 

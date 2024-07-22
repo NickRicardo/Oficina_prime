@@ -1,17 +1,16 @@
-package com.oficinaPrime.backend.dto;
+package com.oficinaPrime.backend.domain;
+
+import java.io.Serializable;
 import java.util.Date;
 
-public class SaleDTO {
+public abstract class SaleDomain implements Serializable {
 
-    private Integer id;
-    private Integer clienteId;
-    private Integer produtosId;
-    private Double valorTotal;
-    private Date dataVenda;
-    private String status;
-    
-
-
+    protected Integer id;
+    protected Integer clientId;
+    protected Integer productId;
+    protected Double valorTotal;
+    protected Date dataVenda;
+    protected String status;
 
     public Integer getId() {
         return this.id;
@@ -21,21 +20,23 @@ public class SaleDTO {
         this.id = id;
     }
 
-    public Integer getClienteId() {
-        return this.clienteId;
+
+    public Integer getClientId() {
+        return this.clientId;
     }
 
-    public void setClienteId(Integer clienteId) {
-        this.clienteId = clienteId;
+    public void setClientId(Integer clientId) {
+        this.clientId = clientId;
     }
 
-    public Integer getProdutosId() {
-        return this.produtosId;
+    public Integer getProductId() {
+        return this.productId;
     }
 
-    public void setProdutosId(Integer produtosId) {
-        this.produtosId = produtosId;
+    public void setProductId(Integer productId) {
+        this.productId = productId;
     }
+ 
 
     public Double getValorTotal() {
         return this.valorTotal;
@@ -60,9 +61,6 @@ public class SaleDTO {
     public void setStatus(String status) {
         this.status = status;
     }
-
-
-   
 
 
 }
